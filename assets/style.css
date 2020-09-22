@@ -1,0 +1,14 @@
+*{box-sizing:border-box;}
+body{font:18px/1.5 serif;margin:1rem auto;max-width:75ch;padding:0.5rem;}
+h1,h2,h3,h4,h5,h6{font-family:sans-serif;line-height:1.3;position:relative;}
+blockquote{background:#eee;border-left:4px solid #2d2d2d;font-size:120%;margin-left:0;padding-left:10px;width:100%;}
+figure {margin:0;width:100%;}
+figcaption{font-style:italic;}
+img{max-width:100%;height:auto}
+table{border-collapse:collapse;text-align:left;width:100%;}
+table thead{border-bottom:1px solid currentColor;}
+pre{background:blanchedalmond;max-width:100%;padding:10px;height:auto;overflow:auto;white-space:pre-wrap;}
+code{background:blanchedalmond;}
+a.header-anchor{float:right;display:none;}
+h2:hover a.header-anchor{display:block;}
+footer{font-size: 85%;}

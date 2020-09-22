@@ -1,0 +1,28 @@
+name: 'Moulinette'
+description: 'Get a blog out of your GitHub Issues, using GitHub Action'
+author: 'Cyril Rohr'
+branding:
+  icon: anchor
+  color: purple
+inputs:
+  labels:
+    description: 'Labels that your issue must have to be included, comma-separated'
+    default: "published"
+    required: false
+  title:
+    description: 'Title for the generated website'
+    default: 'Moulinette'
+    required: false
+  domain:
+    description: 'Custom domain, if any'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    MOULINETTE_LABELS: "${{ inputs.labels }}"
+    MOULINETTE_SITE_TITLE: "${{ inputs.title }}"
+    MOULINETTE_SITE_DOMAIN: "${{ inputs.domain }}"
+    GITHUB_TOKEN: "${{ github.token }}"
+    GITHUB_REPOSITORY: "${{ github.repository }}"
